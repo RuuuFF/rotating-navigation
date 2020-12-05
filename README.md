@@ -1,5 +1,5 @@
 ## ⚙️ Projeto
-**Rotating Navigation** consiste em um container que roda para exibir a barra de navegação da página. Foi desenvolvido no curso <a href="https://www.udemy.com/share/103Pv2AEcYdFxQQXUH">50 Projects In 50 Days</a>.
+**Rotating Navigation** consiste em um container que rotaciona para exibir a barra de navegação da página. Foi desenvolvido no curso <a href="https://www.udemy.com/share/103Pv2AEcYdFxQQXUH">50 Projects In 50 Days</a>.
 
 ## ✈️ Tecnologias
 - HTML
