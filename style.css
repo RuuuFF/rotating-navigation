@@ -21,19 +21,6 @@ body {
   transition: transform .5s linear;
 }
 
-.container.show-nav {
-  transform: rotate(-20deg);
-}
-
-.container.show-nav .circle {
-  transform: rotate(-70deg);
-}
-
-.container.show-nav + nav li {
-  transform: translateX(0);
-  transition-delay: .1s;
-}
-
 .circle-container {
   position: fixed;
   top: -100px;
@@ -45,7 +32,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  position: relative;/*para aplicar "position: absolute" nos botões*/
+  position: relative; /* Para aplicar "position: absolute" nos botões */
   transition: transform .5s linear;
 }
 
@@ -54,7 +41,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 100px;
+  height: 100px; /* A altura do botão precisa ser metade do valor da altura de ".circle" */
   background: transparent;
   color: #fff;
   border: 0;
@@ -71,8 +58,8 @@ body {
 
 .circle button#close {
   top: 60%;
-  transform: rotate(90deg);
   transform-origin: top left;
+  transform: rotate(90deg); /* Com rotate de 90deg no botão close, top vai funcionar como se fosse um right */
 }
 
 .content {
@@ -118,7 +105,7 @@ nav ul li {
   transition: transform .4s ease-in;
 }
 
-/* para o efeito de escadinha */
+/* Para o efeito de escadinha */
 nav ul li + li {
   margin-left: 15px;
   transform: translateX(-150%);
@@ -134,7 +121,21 @@ nav ul li i {
   margin-right: 10px;
 }
 
-/*quando a resolução menor que 720px*/
+/* Animações ao adicionar a tag */
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg); /* Com rotate -20 no container e -70 em circle, é o suficiente para fazer o botão close aparecer (-20+-70=-90) */
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: .1s; /* Delay para iniciar a animação assim que a classe "show-nav" é adicionada */
+}
+
+/* Resolução da tela menor que 720px */
 @media (max-width: 720px) {
   .container {
     padding: 50px 30px;
